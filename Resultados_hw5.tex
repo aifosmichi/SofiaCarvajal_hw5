@@ -1,0 +1,92 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Resultados Tarea 5}
+\author{Alba Sofía Carvajal}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+En la presente tarea se usó el método Bayesiano para estimar parámetros en dos problemas puntuales. El primero de estos es un problema biológico, en el cual con un arreglo dado de moléculas dentro de una membrana se calculó cuál era el tamaño del poro. Este poro, se supone que debe ser el circulo de máximo radio que se puede hacer dentro de este arreglo de moleculas sin tocarlas y respetando su radio que es de 1A. El segundo problema, consistió en hallar la capacitancia y resistencia más optimos para un circuito RC dados una serie de datos de carga a través del tiempo.
+\end{abstract}
+
+\section{Canal ionico}
+Para hallar el poro de mayor tamaño se empleó el método de Monte Carlo. Se estipularon unos parámetros iniciales $x_o y_o r_o$ observando las graficas con la distribución incial de las moleculas. Luego se empezaron a variar con una distribución especifica para cada caso. En estas iteraciones se tuvo en cuenta que se fuera guardando el radio más grande que no tocaara ninguna molécula. A continuacion se mostraran las graficas correspondientes.
+
+\begin{figure}
+\centering
+\includegraphics{CI.png}
+\caption{\label{fig:CI}En esta grafica se puede observar el circulo hallado para el primer conjunto de moleculas.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{CI1.png}
+\caption{\label{fig:CI1}En esta grafica se puede observar el circulo hallado para el primer conjunto de moleculas}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{CI1B.png}
+\caption{\label{fig:CI1B}En esta grafica se puede observar el circulo hallado para el primer conjunto de moleculas}
+\end{figure}
+
+\section{Circuito RC}
+Con las medidas de la carga a travez del tiempo obtenidas en el archivo "circuitoRC.txt" se hallaron los valores de la resistencia y la capacitancia de dicho experimento. Esto se hizo tomando como referencia el notebook de método Bayesiano para estimar parametros.
+
+Se hicieron varias graficas para mostrar cómo el método iba acercandose a estos valores haciendo uso de la probabilidad y de cómo el método se va acercando a los mejores valores, comparandolos entre ellos y sacando al final los mayores.
+
+La primera figura figura 1 corresponde a los datos de R y C que se fueron obteniendo en el metodo a lo largo de las iteraciones.
+
+\begin{figure}
+\centering
+\includegraphics{RC1.png}
+\caption{\label{fig:RC1}Esta es la grafica que muestra la variacion entre la Resistencia y la capacitancia.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{RC2.png}
+\caption{\label{fig:RC2} La verosimilitud vs la resistencia.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{RC3.png}
+\caption{\label{fig:RC3}.La verosimilitud vs la capacitancia}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{RC4.png}
+\caption{\label{fig:RC4} Variacion de los datos a los más probables.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{RC5.png}
+\caption{\label{fig:RC5}Histograma para la resistencia, el valor máximo es el parametro buscado.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{RC6.png}
+\caption{\label{fig:RC6}Histograma para la capacitancia, el valor máximo es el parametro buscado.}
+\end{figure}
+
+
+\end{document}
+
